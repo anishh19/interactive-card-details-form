@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+  <img class="main-bg" id="desktopBg" src="images/bg-main-desktop.png"></img>
+  <img id="phoneBg" src="images/bg-main-mobile.png"></img>
+  <div id="cardBack">
+    <img id="card-back" src="images/bg-card-back.png"></img>
+    <h2 id="txt">000</h2>
+  </div>
+  <div id="card-front">
+    <img id="logio" src="images/card-logo.svg">
+    <h1 class="card-number" id="cardNumber">0000 0000 0000 0000</h1>
+    <div>
+      <span  id="fullName" class="to-left">Jane Appleseed</span>
+      <span class="to-right"> 
+        <span id="expiryMonth" >00</span>/<span id="expiryYear">00</span>
+      </span>
+    </div>
+  </div>
+ 
+  
+  <div class="container active">
+    <form id="info">
+      <label for="fname">CARDHOLDER NAME</label><br>
+      <input type="text" id="fName" placeholder="e.g. Felicia Leire" style="width: 100%;" ><br>
+      <label for="cNumber">CARD NUMBER</label><br>
+      <input type="number" id="cNumber" placeholder="e.g. 7778 5511 5596 7151" style="width: 100%;"><br>
+      <div style="display: flex; flex-direction:row">
+        <div>
+          <label for="expMonth">EXP DATE [MM/YY]</label><br>
+          <input type="number" id="expMonth" placeholder="MM" max="12" min="01" name="month" style="width: 35%;">
+          <input type="number" id="expYear" placeholder="YY" max="99" min="00" name="year" style="width:35%; ">
+        </div>
+        <div>
+          <label for="CVV">CVV</label><br>
+          <input type="number" id="CVV" placeholder="e.g. 123" style="width: 100%;"><br>
+        </div>
+      </div>
+      <button id="submit" type="button">
+        Confirm
+      </button>
+    </form>
+    
+  </div>
+
+
+  <div class="complete container">
+  
+  
+  <img src="images/icon-complete.svg">
+  <br>
+  <h1>Thank you!</h1>
+  <br><br>
+  
+  <p> We've added your card details </p>
+
+  <br><br>
+  <button id="continue">Continue</button>
+
+  </div>
+  
+
+<script src="script.js"></script>
+</body>
+</html>
